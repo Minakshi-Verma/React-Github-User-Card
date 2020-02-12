@@ -17,16 +17,21 @@ class Card extends React.Component {
                         alt="Card image"
                     />
                   
-                        <h3>User: {this.props.user.login}</h3>
+                        <h3>{this.props.user.name}</h3>
+                        
+                        
                     </div>
+
+                    <h2>My followers</h2>
                         {/* <CardSubtitle>{this.props.user.name}</CardSubtitle>
                         <CardText>{this.props.user.followers}</CardText> */}
                         {/* //if this.state.bool is true---do map else null */}
                         <div className ="followerCard">
+                            
                         {this.props.followers.map(item => (
                             <div className ="follower"> 
-                            <img className=" followerimg" src ={item.avatar_url}/>
-                             <h2>{item.login}</h2>
+                            <img className=" followerimg" src ={item.avatar_url}/>                           
+                             <h3>{item.login}</h3>
                             </div>
 
                         ))}</div>
